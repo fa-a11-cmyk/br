@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Prevent theme flash -->
+    <script>
+      (function(){var t=localStorage.getItem('rapidomeet-theme');if(!t){t=window.matchMedia('(prefers-color-scheme:light)').matches?'light':'dark'}document.documentElement.setAttribute('data-theme',t)})();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RapidoMeet — Vos réunions se transforment en actions automatiques</title>
+    <meta name="description" content="RapidoMeet transcrit vos visioconférences et déclenche automatiquement les actions : CRM mis à jour, tâches créées, rapport WhatsApp en 3 minutes. Essai gratuit 14 jours.">
+    <meta name="keywords" content="transcription réunion, automatisation post-réunion, agent IA, CRM automatique, compte rendu automatique, RapidoCRM, OpenClaw" />
+    <meta name="author" content="BraindCode" />
+
+    <!-- PWA -->
+    <meta name="theme-color" content="#E91E8C" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="RapidoMeet">
+    <link rel="apple-touch-icon" href="/pwa/icons/icon-192.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="RapidoMeet — Vos réunions se transforment en actions automatiques">
+    <meta property="og:description" content="RapidoMeet transcrit vos visioconférences et déclenche automatiquement les actions : CRM mis à jour, tâches créées, rapport WhatsApp en 3 minutes. Essai gratuit 14 jours.">
+    <meta property="og:image" content="/og-image.png">
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RapidoMeet — Vos réunions se transforment en actions automatiques">
+    <meta name="twitter:description" content="RapidoMeet transcrit vos visioconférences et déclenche automatiquement les actions : CRM mis à jour, tâches créées, rapport WhatsApp en 3 minutes. Essai gratuit 14 jours.">
+    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/d28b033a-e730-4ebf-83c5-8f2d9495d3a8?Expires=1773882471&amp;GoogleAccessId=go-api-on-aws%40gpt-engineer-390607.iam.gserviceaccount.com&amp;Signature=QZ5Ixiy6s3Y9E1irueOlMIvndQWuCXd95v9JCjbJqftg8YYs3Rnj4oQeF8hqpjp78CntLxwTMA%2BuUqJBu7BJrfF3NQUIRwkbWaTZE1d1gyN%2FKneDNcCRrAuW8uf4OBnGsXpRrnlhdyWFRu95SsAI2Yywu3CT5x6j4NX%2B38gZffhzpnCU8BYgfMdEasoDmWlTKBdMOoAHQ6b4z84ve5wpCJICF6LBUfoOTelv%2BxDD69QKGx8TTmg7QJOkjy04OhxAMNmb9hJ3RyWBamd3lkBpGC5nKz5ou06FoF7JwK6MgZpBZWAOOXkmYAQR6a0%2BC%2BspsBPqiVbfoXi0SNxyqtS%2Fwg%3D%3D">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://rapidomeet.io" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- Fonts — preload critical weights -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.gstatic.com/s/nunito/v26/XRXI3I6Li01BKofiOc5wtlZ2di8HDIkhdTQ3j6zbXWjgeg.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="https://fonts.gstatic.com/s/quicksand/v31/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkP8o58a-xDwxUD2GFw.woff2" as="font" type="font/woff2" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Quicksand:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "RapidoMeet",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Agent IA de transcription et d'orchestration post-réunion. Transcrit vos visioconférences et déclenche automatiquement les actions CRM, email, agenda et WhatsApp.",
+      "offers": [
+        { "@type": "Offer", "price": "29.00", "priceCurrency": "EUR", "name": "Plan Starter" },
+        { "@type": "Offer", "price": "79.00", "priceCurrency": "EUR", "name": "Plan Pro" }
+      ],
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "47" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "BraindCode",
+        "url": "https://braindcode.com"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

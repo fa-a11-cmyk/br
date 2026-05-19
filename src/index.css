@@ -1,0 +1,380 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ─── DARK THEME (default) ─── */
+  :root,
+  [data-theme="dark"] {
+    --black: 240 25% 3%;
+    --dark-1: 240 25% 7%;
+    --dark-2: 240 17% 10%;
+    --dark-3: 240 17% 14%;
+    --dark-4: 240 17% 19%;
+    --dark-5: 240 17% 24%;
+
+    --fuchsia: 326 82% 52%;
+    --fuchsia-l: 326 84% 62%;
+    --fuchsia-d: 326 82% 52%;
+    --violet: 263 84% 58%;
+    --violet-l: 263 90% 66%;
+    --violet-d: 263 84% 58%;
+
+    --success: 160 68% 40%;
+    --warning: 40 96% 50%;
+
+    --rm-white: 240 33% 97%;
+    --gray-1: 240 12% 64%;
+    --gray-2: 240 12% 37%;
+
+    --background: var(--black);
+    --foreground: var(--rm-white);
+
+    --card: var(--dark-2);
+    --card-foreground: var(--rm-white);
+
+    --popover: var(--dark-2);
+    --popover-foreground: var(--rm-white);
+
+    --primary: var(--fuchsia);
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: var(--dark-3);
+    --secondary-foreground: var(--rm-white);
+
+    --muted: var(--dark-3);
+    --muted-foreground: var(--gray-1);
+
+    --accent: var(--violet);
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: var(--dark-4);
+    --input: var(--dark-4);
+    --ring: var(--fuchsia);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: var(--dark-1);
+    --sidebar-foreground: var(--gray-1);
+    --sidebar-primary: var(--fuchsia);
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: var(--dark-3);
+    --sidebar-accent-foreground: var(--rm-white);
+    --sidebar-border: var(--dark-4);
+    --sidebar-ring: var(--fuchsia);
+
+    /* Semantic surface tokens */
+    --surface-elevated: var(--dark-3);
+    --surface-hover: var(--dark-4);
+    --text-link: 326 84% 62%;
+  }
+
+  /* ─── LIGHT THEME ─── */
+  [data-theme="light"] {
+    --black: 0 0% 98%;
+    --dark-1: 0 0% 100%;
+    --dark-2: 0 0% 100%;
+    --dark-3: 240 14% 96%;
+    --dark-4: 240 12% 88%;
+    --dark-5: 240 12% 82%;
+
+    --fuchsia: 326 82% 52%;
+    --fuchsia-l: 326 82% 42%;
+    --fuchsia-d: 326 82% 52%;
+    --violet: 263 84% 58%;
+    --violet-l: 263 84% 48%;
+    --violet-d: 263 84% 58%;
+
+    --success: 160 84% 30%;
+    --warning: 40 96% 44%;
+
+    --rm-white: 240 25% 6%;
+    --gray-1: 240 14% 34%;
+    --gray-2: 240 10% 56%;
+
+    --background: 0 0% 98%;
+    --foreground: 240 25% 6%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 25% 6%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 25% 6%;
+
+    --primary: var(--fuchsia);
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 14% 96%;
+    --secondary-foreground: 240 25% 6%;
+
+    --muted: 240 14% 96%;
+    --muted-foreground: 240 14% 34%;
+
+    --accent: var(--violet);
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 12% 88%;
+    --input: 240 12% 88%;
+    --ring: var(--fuchsia);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 14% 34%;
+    --sidebar-primary: var(--fuchsia);
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 14% 96%;
+    --sidebar-accent-foreground: 240 25% 6%;
+    --sidebar-border: 240 12% 88%;
+    --sidebar-ring: var(--fuchsia);
+
+    --surface-elevated: 240 14% 96%;
+    --surface-hover: 240 14% 93%;
+    --text-link: 326 82% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  /* Smooth theme transitions */
+  *,
+  *::before,
+  *::after {
+    transition-property: background-color, border-color, color, box-shadow, opacity;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+  }
+
+  /* Don't transition animations */
+  [class*="animate-"],
+  .animated {
+    transition-property: opacity, transform;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: hsl(var(--surface-elevated)); }
+  ::-webkit-scrollbar-thumb { background: hsl(var(--dark-5)); border-radius: 100px; }
+  ::-webkit-scrollbar-thumb:hover { background: hsl(var(--fuchsia)); }
+
+  /* Selection */
+  ::selection {
+    background: hsl(var(--fuchsia) / 0.15);
+    color: hsl(var(--fuchsia));
+  }
+
+  /* Focus visible */
+  :focus-visible {
+    outline: 2px solid hsl(var(--fuchsia));
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(326 82% 52%), hsl(263 84% 58%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, hsl(326 82% 52%), hsl(263 84% 58%));
+  }
+
+  .shadow-fuchsia {
+    box-shadow: 0 8px 32px rgba(233, 30, 140, 0.3);
+  }
+
+  .shadow-fuchsia-lg {
+    box-shadow: 0 12px 40px rgba(233, 30, 140, 0.4);
+  }
+
+  .bg-fuchsia-d {
+    background: hsl(var(--fuchsia) / 0.12);
+  }
+
+  .bg-violet-d {
+    background: hsl(var(--violet) / 0.12);
+  }
+
+  .bg-success-d {
+    background: hsl(var(--success) / 0.12);
+  }
+
+  .text-rm-white {
+    color: hsl(var(--rm-white));
+  }
+
+  .border-fuchsia-hover:hover {
+    border-color: hsl(326 82% 52%);
+  }
+
+  .border-violet-hover:hover {
+    border-color: hsl(var(--violet) / 0.5);
+  }
+
+  /* Force dark — for terminal mockups, code blocks */
+  .force-dark {
+    background: #1A1A2C !important;
+    color: #F5F5FA !important;
+  }
+
+  @keyframes pulse-blob {
+    0%, 100% { transform: translate(-50%, 0) scale(1); }
+    50% { transform: translate(-50%, 0) scale(1.08); }
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  @keyframes scale-in {
+    from { transform: scale(0.92); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-pulse-blob {
+    animation: pulse-blob 6s ease-in-out infinite;
+  }
+
+  .animate-blink {
+    animation: blink 1.5s ease-in-out infinite;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.3s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.4s ease-out;
+  }
+
+  /* Grain overlay — hide in light mode */
+  [data-theme="light"] .dark-only-grain {
+    display: none !important;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* T06: Safe area for iPhone notch/home indicator */
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 8px);
+  }
+}
+
+/* Chat widget animations */
+@keyframes chatOpen {
+  from { opacity: 0; transform: scale(0.85) translateY(20px); transform-origin: bottom right; }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes typingDot {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-6px); opacity: 1; }
+}
+
+@keyframes pulseRing {
+  0% { transform: scale(1); opacity: 0.3; }
+  60% { transform: scale(1.4); opacity: 0.05; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ─── GrapeJS Theme Overrides ─── */
+.gjs-one-bg { background-color: hsl(var(--dark-2)) !important; }
+.gjs-two-color { color: hsl(var(--foreground)) !important; }
+.gjs-three-bg { background-color: hsl(var(--dark-3)) !important; }
+.gjs-four-color, .gjs-four-color-h:hover { color: hsl(var(--fuchsia)) !important; }
+
+.gjs-cv-canvas { background: hsl(var(--dark-1)) !important; }
+.gjs-frame-wrapper { margin: 0 auto; }
+
+.gjs-pn-panels { display: none !important; }
+.gjs-pn-views-container { display: none !important; }
+.gjs-pn-views { display: none !important; }
+
+.gjs-block { 
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: 8px !important;
+  background: hsl(var(--muted)) !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+.gjs-toolbar {
+  background: hsl(var(--dark-3)) !important;
+  border-radius: 8px !important;
+}
+
+.gjs-toolbar-item {
+  color: hsl(var(--foreground)) !important;
+}
+
+.gjs-selected {
+  outline: 2px solid hsl(var(--fuchsia)) !important;
+  outline-offset: -2px;
+}
+
+.gjs-highlighter {
+  outline: 2px solid hsl(var(--violet)) !important;
+}
+
+.gjs-rte-toolbar {
+  background: hsl(var(--dark-2)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: 8px !important;
+}
+
+.gjs-rte-actionbar {
+  background: hsl(var(--dark-3)) !important;
+}
+
+@media (max-width: 640px) {
+  .gjs-cv-canvas {
+    width: 100% !important;
+  }
+}
+
+/* Safe area for iPhone notch/home indicator */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

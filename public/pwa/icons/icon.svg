@@ -1,0 +1,20 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E91E8C"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#grad)"/>
+  <path d="M 120 256 Q 120 184 168 136" stroke="white" stroke-width="18" stroke-linecap="round" fill="none" opacity="0.45"/>
+  <path d="M 88 256 Q 88 160 152 104" stroke="white" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.25"/>
+  <path d="M 120 256 Q 120 328 168 376" stroke="white" stroke-width="18" stroke-linecap="round" fill="none" opacity="0.45"/>
+  <path d="M 88 256 Q 88 352 152 408" stroke="white" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.25"/>
+  <circle cx="256" cy="256" r="56" fill="white" opacity="0.95"/>
+  <circle cx="256" cy="256" r="30" fill="url(#grad)"/>
+  <circle cx="256" cy="256" r="12" fill="white"/>
+  <path d="M 392 256 Q 392 184 344 136" stroke="white" stroke-width="18" stroke-linecap="round" fill="none" opacity="0.45"/>
+  <path d="M 424 256 Q 424 160 360 104" stroke="white" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.25"/>
+  <path d="M 392 256 Q 392 328 344 376" stroke="white" stroke-width="18" stroke-linecap="round" fill="none" opacity="0.45"/>
+  <path d="M 424 256 Q 424 352 360 408" stroke="white" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.25"/>
+</svg>

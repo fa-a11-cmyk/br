@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RapidoMeet — Hors ligne</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:#08080D;color:#F5F5FA;font-family:'DM Sans',sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;text-align:center}
+    .logo{width:80px;height:80px;background:linear-gradient(135deg,#E91E8C,#7C3AED);border-radius:20px;margin:0 auto 32px;display:flex;align-items:center;justify-content:center}
+    .icon-pulse{width:40px;height:40px;background:rgba(255,255,255,0.2);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+    @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.15);opacity:0.7}}
+    h1{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;letter-spacing:-0.5px;margin-bottom:12px}
+    p{font-size:15px;color:#9898B0;line-height:1.7;max-width:340px;margin:0 auto 32px}
+    .offline-features{background:#16161F;border:1px solid #28283A;border-radius:14px;padding:20px 24px;max-width:360px;margin:0 auto 28px;text-align:left}
+    .offline-features h3{font-size:11px;font-weight:500;color:#55556A;text-transform:uppercase;letter-spacing:2px;margin-bottom:14px}
+    .feature-item{display:flex;align-items:center;gap:10px;font-size:13px;color:#9898B0;margin-bottom:10px}
+    .dot{width:6px;height:6px;border-radius:50%;background:#10B981;flex-shrink:0}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#E91E8C,#7C3AED);border:none;border-radius:10px;padding:13px 28px;cursor:pointer;font-family:'Syne',sans-serif;font-weight:700;font-size:15px;color:white;margin-bottom:12px;text-decoration:none}
+    .btn-ghost{background:none;border:1px solid #28283A;color:#9898B0;font-family:'DM Sans',sans-serif;font-weight:400;font-size:14px}
+    .status{margin-top:32px;font-family:'DM Mono',monospace;font-size:11px;color:#55556A}
+    .status span{display:inline-block;width:6px;height:6px;border-radius:50%;background:#F59E0B;margin-right:6px;animation:blink 1.5s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
+  </style>
+</head>
+<body>
+  <div class="logo"><div class="icon-pulse"></div></div>
+  <h1>Vous êtes hors ligne</h1>
+  <p>Votre connexion internet est temporairement indisponible. Vos données récentes restent accessibles.</p>
+  <div class="offline-features">
+    <h3>Disponible hors ligne</h3>
+    <div class="feature-item"><div class="dot"></div>Vos 5 dernières réunions et rapports</div>
+    <div class="feature-item"><div class="dot"></div>La liste de vos tâches en cours</div>
+    <div class="feature-item"><div class="dot"></div>Votre agenda de la semaine</div>
+    <div class="feature-item"><div class="dot" style="background:#F59E0B"></div>Import audio (synchronisé au retour)</div>
+    <div class="feature-item"><div class="dot" style="background:#F59E0B"></div>Validation de tâches (sync auto)</div>
+  </div>
+  <a href="/app/dashboard" class="btn">📱 Accéder aux données locales</a><br>
+  <button class="btn btn-ghost" onclick="window.location.reload()">🔄 Réessayer la connexion</button>
+  <div class="status"><span></span>En attente de connexion...</div>
+  <script>
+    window.addEventListener('online',()=>{setTimeout(()=>window.location.href='/app/dashboard',500)});
+  </script>
+</body>
+</html>
