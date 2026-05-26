@@ -1,0 +1,24 @@
+# ─────────────────────────────────────────
+# .gitignore Terraform — RapidoMeet
+# ─────────────────────────────────────────
+
+# Fichiers sensibles (secrets)
+terraform.tfvars
+*.tfvars
+!example.tfvars
+
+# State Terraform (contient des secrets en clair)
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
