@@ -9,24 +9,24 @@ resource "aws_amplify_app" "rapidomeet" {
   access_token = var.github_token
 
   # Vite/React build config
-  build_spec = <<-EOT
-    version: 1
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
-  EOT
+  #build_spec = <<-EOT
+  #  version: 1
+  #  frontend:
+  #    phases:
+  #      preBuild:
+  #        commands:
+  #          - npm ci
+  #      build:
+  #        commands:
+  #          - npm run build
+  #    artifacts:
+   #     baseDirectory: dist
+   #     files:
+   #       - '**/*'
+   #   cache:
+   #     paths:
+   #       - node_modules/**/*
+  #EOT
 
   # Fix React Router — toutes les routes -> index.html
   custom_rule {
