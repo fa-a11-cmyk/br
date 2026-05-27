@@ -3,11 +3,10 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm install -g bun
-        - bun install
+        - npm install --legacy-peer-deps
     build:
       commands:
-        - bun run build
+        - npm run build
   artifacts:
     baseDirectory: dist
     files:
