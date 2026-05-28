@@ -66,8 +66,8 @@ variable "supabase_url" {
   sensitive   = true
 }
 
-variable "supabase_anon_key" {
-  description = "Clé anonyme Supabase"
+variable "supabase_publishable_key" {
+  description = "Clé publique Supabase (VITE_SUPABASE_PUBLISHABLE_KEY)"
   type        = string
   sensitive   = true
 }

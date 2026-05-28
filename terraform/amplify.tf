@@ -38,7 +38,7 @@ resource "aws_amplify_app" "rapidomeet" {
   # Variables d'environnement Supabase (injectées au build)
   environment_variables = {
     VITE_SUPABASE_URL      = var.supabase_url
-    VITE_SUPABASE_ANON_KEY = var.supabase_anon_key
+    VITE_SUPABASE_PUBLISHABLE_KEY = var.supabase_publishable_key
     VITE_APP_NAME          = "RapidoMeet"
     NODE_ENV               = "production"
   }
