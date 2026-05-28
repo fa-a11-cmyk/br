@@ -6,7 +6,7 @@ resource "aws_amplify_app" "rapidomeet" {
   repository = var.github_repository
 
   # Token GitHub pour accès au repo
-  access_token = var.github_token
+  #access_token = var.github_token
 
   # Vite/React build config
   #build_spec = <<-EOT
